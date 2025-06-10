@@ -30,7 +30,7 @@ func main() {
   task-cli list                             
       → List all tasks
 
-  task-cli list [done|todo|in-progress]     
+  task-cli list [done|todo|inprogress]     
       → List tasks by status
 
   task-cli -h | --help                      
