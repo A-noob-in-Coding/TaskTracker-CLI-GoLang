@@ -83,8 +83,8 @@ func ListTasks(flag int) error {
 		fmt.Printf("  ID: %d\n", task.ID)
 		fmt.Printf("  Description: %s\n", task.Description)
 		fmt.Printf("  Status: %s\n", task.Status)
-		fmt.Printf("  Created: %s\n", task.CreatedAt)
-		fmt.Printf("  Updated: %s\n", task.UpdatedAt)
+		fmt.Printf("  Created: %s\n", task.CreatedAt.Format("2006-01-02 15:04:05"))
+		fmt.Printf("  Updated: %s\n", task.UpdatedAt.Format("2006-01-02 15:04:05"))
 		fmt.Println() // Empty line between tasks
 	}
 	return nil
@@ -176,4 +176,3 @@ func markDone(id string, flag bool) error {
 
 	return writeTasks(tasks)
 }
-
