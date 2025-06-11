@@ -19,7 +19,7 @@ type Task struct {
 }
 
 func getNewId() (int, error) {
-	const filename = "Utilities/id.txt"
+	const filename = "id.txt"
 
 	// Read current ID from file
 	data, err := os.ReadFile(filename)

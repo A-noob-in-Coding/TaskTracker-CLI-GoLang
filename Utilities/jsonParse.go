@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-const filename = "Utilities/data.json" // Define filename as a constant
+const filename = "data.json" // Define filename as a constant
 func readTasks() ([]Task, error) {
 	data, err := os.ReadFile(filename)
 	if err != nil {
@@ -112,7 +112,6 @@ func deleteTaskFromFile(id string) error {
 	if foundIndex == -1 {
 		return fmt.Errorf("task with ID %d not found", taskID)
 	}
-
 	tasks = append(tasks[:foundIndex], tasks[foundIndex+1:]...)
 	return writeTasks(tasks)
 }
